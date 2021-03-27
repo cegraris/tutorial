@@ -35,3 +35,7 @@ git commit -m "xxxxx" -m "xxxxx"
 ```
 git log
 ```
+简短单行说明
+```
+git log --pretty=oneline
+```
