@@ -87,13 +87,35 @@ checkout其实使用版本苦力的版本替换工作区的版本
 
 # 远程仓库GitHub
 在GitHub 建一个新的repo，然后将其clone到本地，或将一个本地仓库与之关联 <br/>
+clone到本地的方法：<br/>
+```
+git clone git@github.com:cegraris/tutorial.git
+```
 本地仓库与之关联的方法： <br/>
 ```
 git remote add origin git@github.com:cegraris/tutorial.git
 ```
-origin是远程库的默认名字，后面一串是GitHub提供的SSH地址<br/>
+origin是远程库的默认习惯名字，后面一串是GitHub提供的SSH地址<br/>
 绑定后就可以将本地库的内容推送到远程了
 ```
 git push -u origin master
 ```
--u参数可以将远程和本地库的master分支绑定，以后就可以直接用git push，不用加后面的参数了
+-u参数可以将远程和本地库的master分支绑定，以后就可以直接用git push origin master了<br/>
+
+若要删除远程和本地库的绑定可以先查看远程库信息
+```
+git remote -v
+```
+然后根据名字（比如origin）删除
+```
+git remote rm origin
+```
+
+# 分支管理
+一般情况下：<br/>
+HEAD -> master -> 最新的commit <br/>
+当我们创建了一个新的分支（dev）时：<br/>
+HEAD -> dev -> 最新的commit <br/>
+此后对工作区的修改和提交就是在dev分支上了，master的指针不会再改变<br/>
+等dev工作完成了，可以把master指向dev指向的那个commit，那就完成了合并<br/>
+合并完成后也可以删除dev分支，即将dev指针删除<br/>
