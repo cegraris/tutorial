@@ -1,11 +1,17 @@
-# 安装设置
+# git安装设置
 安装方法可以google
 安装完后设立全局名称和邮箱，用以后面commit
 ```bash
 git config --global user.name "XXX"
 git config --global user.email "XXX@XXX"
 ```
-# 初始化github库
+
+# 建立SSH Key
+```
+ssh-keygen -t rsa -C "XXX@xxx"
+```
+
+# 初始化git库
 在需要建立git库的文件夹目录下
 ```bash
 git init
@@ -53,3 +59,28 @@ HEAD^ -> 回退上上版本 </br>
 HEAD~100 -> 回退前一百个版本 </br>
 d404070e3a76c058066cb62c30b3bcfdaf9095d9 -> 回退到该版本 </br>
 d4040 -> 回退到该版本（简写也是可以的） </br>
+
+# 撤销修改
+放弃工作区的修改，将文档返回到最近一次git commit或git add时的状态 <br/>
+当add到暂存区，然后修改（没commit），就会撤回到add的时候的状态<br/>
+当commit过了，然后修改（没有add)，就会撤回到commit时的状态<br/>
+```
+git checkout -- <file>
+```
+add后，可以用reset把暂存区的修改撤销掉，重新放回工作区
+```
+git reset HEAD <file>
+```
+
+# 删除文件
+文件管理器中将文件删了<br/>
+当这个文件时确实要删除的:<br/>
+```
+git rm <file>
+git commit -m "xxxxx"
+```
+当这个文件是误删，可以通过以下指令恢复文件:<br/>
+```
+git checkout -- <file>
+```
+checkout其实使用版本苦力的版本替换工作区的版本
