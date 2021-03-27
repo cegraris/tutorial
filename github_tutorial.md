@@ -83,7 +83,7 @@ git commit -m "xxxxx"
 ```
 git checkout -- <file>
 ```
-checkout其实使用版本苦力的版本替换工作区的版本
+checkout其实使用版本库里的版本替换工作区的版本
 
 # 远程仓库GitHub
 在GitHub 建一个新的repo，然后将其clone到本地，或将一个本地仓库与之关联 <br/>
@@ -123,6 +123,10 @@ git checkout -b dev
 git brach dev
 git checkout dev
 ```
+或
+```
+git switch -c dev
+```
 HEAD -> dev -> 最新的commit <br/>
 此后对工作区的修改和提交就是在dev分支上了，master的指针不会再改变<br/>
 可以用以下指令查看当前分支
@@ -130,4 +134,17 @@ HEAD -> dev -> 最新的commit <br/>
 git branch
 ```
 等dev工作完成了，可以把master指向dev指向的那个commit，那就完成了合并<br/>
+```
+git checkout master
+git merge dev
+```
+或
+```
+git switch master
+git merge dev
+```
+merge指令可将制定分支合并到当前分支<br/>
 合并完成后也可以删除dev分支，即将dev指针删除<br/>
+```
+git branch -d dev
+```
