@@ -115,7 +115,19 @@ git remote rm origin
 一般情况下：<br/>
 HEAD -> master -> 最新的commit <br/>
 当我们创建了一个新的分支（dev）时：<br/>
+```
+git checkout -b dev
+```
+等价于
+```
+git brach dev
+git checkout dev
+```
 HEAD -> dev -> 最新的commit <br/>
 此后对工作区的修改和提交就是在dev分支上了，master的指针不会再改变<br/>
+可以用以下指令查看当前分支
+```
+git branch
+```
 等dev工作完成了，可以把master指向dev指向的那个commit，那就完成了合并<br/>
 合并完成后也可以删除dev分支，即将dev指针删除<br/>
