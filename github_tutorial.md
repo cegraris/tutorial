@@ -10,9 +10,28 @@ git config --global user.email "XXX@XXX"
 ```bash
 git init
 ```
-# 提交更新
+# 保存版本快照
 查看版本控制情况
-```
+```bash
 git status
 ```
-产看文件变化
+查看文件变化情况
+```bash
+git diff XXX.xxx
+```
+快照
+```
+git add XXX.xxx
+git add YYY.yyy
+git commit -m "xxxxx" -m "xxxxx"
+```
+也可以直接用批量快照
+```
+git add .
+git commit -m "xxxxx" -m "xxxxx"
+```
+
+# 查看历史快照
+```
+git log
+```
