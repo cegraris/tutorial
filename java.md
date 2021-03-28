@@ -13,3 +13,5 @@ sudo update-alternatives --config javac
 javac Test.java
 java Test
 ```
+
+测试
