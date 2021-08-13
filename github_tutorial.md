@@ -37,11 +37,13 @@ git rm --cachted XXX.xxx
 ```
 提交到本地库
 ```bash
-git commit -m "xxxxx" -m "xxxxx"
+git commit -m "xxxxx" XXX.xxx
+git commit -m "xxxxx"
 ```
 
 
 # 查看历史快照
+产看完整日志
 ```
 git log
 ```
@@ -49,7 +51,7 @@ git log
 ```
 git log --pretty=oneline
 ```
-产看完整日志
+查看简短日志
 ```
 git reflog
 ```
@@ -95,7 +97,7 @@ clone到本地的方法：<br/>
 ```
 git clone git@github.com:cegraris/tutorial.git
 ```
-本地仓库与之关联的方法： <br/>
+创建远程库别名： <br/>
 ```
 git remote add origin git@github.com:cegraris/tutorial.git
 ```
@@ -123,12 +125,16 @@ git remote rm origin
 # 分支管理
 一般情况下：<br/>
 HEAD -> master -> 最新的commit <br/>
-当我们创建了一个新的分支（dev）时：<br/>
+查看分支
+```bash
+git branch -v
 ```
+当我们创建了一个新的分支（dev）时：<br/>
+```bash
 git checkout -b dev
 ```
 等价于
-```
+```bash
 git brach dev
 git checkout dev
 ```
