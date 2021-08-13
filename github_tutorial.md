@@ -25,17 +25,21 @@ git status
 ```bash
 git diff XXX.xxx
 ```
-快照
-```
+添加到暂存区
+```bash
 git add XXX.xxx
 git add YYY.yyy
-git commit -m "xxxxx" -m "xxxxx"
-```
-也可以直接用批量快照
-```
 git add .
+```
+从暂存区删除
+```bash
+git rm --cachted XXX.xxx
+```
+提交到本地库
+```bash
 git commit -m "xxxxx" -m "xxxxx"
 ```
+
 
 # 查看历史快照
 ```
