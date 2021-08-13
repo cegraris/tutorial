@@ -102,7 +102,7 @@ git clone git@github.com:cegraris/tutorial.git
 git remote add origin git@github.com:cegraris/tutorial.git
 ```
 origin是远程库的默认习惯名字，后面一串是GitHub提供的SSH地址<br/>
-可以用下列指令查看远程仓库信息（简单/详细）
+可以用下列指令查看远程仓库信息（简单/详细）<br/>
 ```
 git remote
 git remote -v
