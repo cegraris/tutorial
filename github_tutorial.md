@@ -61,7 +61,7 @@ git reflog
 git reset --hard HEAD^
 ```
 HEAD^ -> 回退上一版本 </br>
-HEAD^ -> 回退上上版本 </br>
+HEAD^^ -> 回退上上版本 </br>
 HEAD~100 -> 回退前一百个版本 </br>
 d404070e3a76c058066cb62c30b3bcfdaf9095d9 -> 回退到该版本 </br>
 d4040 -> 回退到该版本（简写也是可以的） </br>
