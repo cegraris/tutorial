@@ -113,6 +113,11 @@ git push -u origin master
 ```
 -u参数可以将远程和本地库的master分支绑定，以后就可以直接用git push origin master了<br/>
 
+push到远端与原来不同的新分支
+```
+git push origin master:my_remote_new_branch
+```
+
 若要删除远程和本地库的绑定可以先查看远程库信息
 ```
 git remote -v
